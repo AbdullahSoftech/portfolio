@@ -7,7 +7,6 @@ import dialogAdmin from "../../Assets/Projects/dialog-admin.jpeg";
 import butter from "../../Assets/Projects/butter.jpeg";
 import dashboard from "../../Assets/Projects/dashboard.jpeg";
 import codeEdit from "../../Assets/Projects/codeEditor.png";
-import emotion from "../../Assets/Projects/emotion.png";
 
 const projects = [
   {
