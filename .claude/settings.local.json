@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C d:/Portfolio/Portfolio status --short)"
+      "Bash(git -C d:/Portfolio/Portfolio status --short)",
+      "Bash(git -C d:/Portfolio/Portfolio remote -v)"
     ]
   }
 }
