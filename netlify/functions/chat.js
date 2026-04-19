@@ -51,9 +51,9 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
-    return { statusCode: 500, body: JSON.stringify({ error: "API key not configured" }) };
+    return { statusCode: 500, body: JSON.stringify({ error: "GROQ_API_KEY not configured" }) };
   }
 
   let body;
@@ -68,31 +68,35 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: "messages array required" }) };
   }
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+  const url = "https://api.groq.com/openai/v1/chat/completions";
 
   const payload = {
-    system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-    contents: messages.map((m) => ({
-      role: m.role === "assistant" ? "model" : "user",
-      parts: [{ text: m.content }],
-    })),
-    generationConfig: { maxOutputTokens: 512, temperature: 0.7 },
+    model: "llama3-8b-8192",
+    messages: [
+      { role: "system", content: SYSTEM_PROMPT },
+      ...messages.map((m) => ({ role: m.role === "assistant" ? "assistant" : "user", content: m.content })),
+    ],
+    max_tokens: 512,
+    temperature: 0.7,
   };
 
   try {
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
       body: JSON.stringify(payload),
     });
 
     const data = await res.json();
 
     if (!res.ok) {
-      return { statusCode: res.status, body: JSON.stringify({ error: data.error?.message || "Gemini error" }) };
+      return { statusCode: res.status, body: JSON.stringify({ error: data.error?.message || "Groq error" }) };
     }
 
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't generate a response.";
+    const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't generate a response.";
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
