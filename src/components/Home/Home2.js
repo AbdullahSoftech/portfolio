@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import abdPic from "../../Assets/abdullah-pic.jpg";
 import Tilt from "react-parallax-tilt";
 
 function Home2() {
@@ -13,43 +13,30 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              A <b className="purple">Full Stack Developer</b> with <b className="purple">2 years</b> of hands-on experience designing and 
+              delivering high-performance web systems. I write clean, reusable code across 
+              the full stack, from pixel-perfect <b className="purple">Angular & React</b> interfaces to robust 
+              <b className="purple"> .NET Core APIs</b> and optimized <b className="purple">SQL databases</b>.
               <br />
               <br />
-              I’m proficient in
-              <i>
-                <b className="purple">
-                  {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
-                </b>
-              </i>
-              — and I enjoy working across both backend and frontend stacks.
-              <br />
-              <br />
-              My key areas of interest include developing
-              <i>
-                <b className="purple">
-                  {" "}
-                  Web Applications, Blockchain Solutions,{" "}
-                </b>
-              </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
-              <br />
-              <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
-              </i>
+              My core interests lie in building <i><b className="purple">intelligent web applications</b></i>, 
+              leveraging <i><b className="purple">Artificial Intelligence</b></i> to solve real-world problems, and staying at the forefront of emerging technologies.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img
+                src={abdPic}
+                className="img-fluid"
+                alt="avatar"
+                style={{
+                  borderRadius: "50%",
+                  boxShadow: "0 4px 20px rgba(200, 137, 230, 0.5)",
+                  objectFit: "cover",
+                  maxWidth: "300px",
+                  maxHeight: "300px",
+                }}
+              />
             </Tilt>
           </Col>
         </Row>

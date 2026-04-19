@@ -2,12 +2,162 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
+import dialog from "../../Assets/Projects/dialog.jpeg";
+import dialogAdmin from "../../Assets/Projects/dialog-admin.jpeg";
+import butter from "../../Assets/Projects/butter.jpeg";
+import dashboard from "../../Assets/Projects/dashboard.jpeg";
+import codeEdit from "../../Assets/Projects/codeEditor.png";
 import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+
+const projects = [
+  {
+    id: 1,
+    title: "Dialog Platform",
+    subtitle: "Stakeholder Engagement & Workflow Management",
+    type: "SaaS Platform",
+    status: "Live / In Progress",
+    description:
+      "A comprehensive SaaS-based stakeholder engagement and workflow management platform designed to unify analytics, communication, and project management tools for enterprise teams. Built with scalable Angular architecture, reactive forms, and optimized change detection strategies to deliver a high-performance user experience.",
+    responsibilities: [
+      "Developed scalable, reusable Angular components following best practices for maintainability and performance.",
+      "Integrated REST APIs to enable seamless data flow and smooth user experience across the platform.",
+      "Built high-performance, responsive web interfaces ensuring cross-browser compatibility and mobile responsiveness.",
+      "Implemented lazy loading, change detection strategies, and code splitting to enhance application performance.",
+      "Designed and developed RESTful services using ASP.NET Web API and C#, including controller logic and data validation.",
+    ],
+    techStack: [
+      "Angular",
+      "TypeScript",
+      "ASP.NET Core",
+      "C#",
+      "REST APIs",
+      "Angular Material",
+      "Bootstrap",
+    ],
+    category: "Full Stack / SaaS",
+    imgPath: dialog,
+    ghLink: "",
+    demoLink: "",
+    isBlog: false,
+  },
+  {
+    id: 5,
+    title: "Dialog Admin Panel",
+    subtitle: "Admin Control Center for Dialog SaaS Platform",
+    type: "Admin Dashboard",
+    status: "Live / In Progress",
+    description:
+      "A powerful and feature-rich admin panel built for the Dialog SaaS platform, enabling administrators to manage stakeholders, monitor workflows, configure platform settings, and oversee team activities. Built with Angular and Angular Material for a clean, enterprise-grade user experience.",
+    responsibilities: [
+      "Developed modular and reusable Angular components for admin-specific workflows and management screens.",
+      "Integrated REST APIs for real-time data management including user roles, permissions, and platform configurations.",
+      "Implemented role-based access control (RBAC) to restrict and manage admin-level features securely.",
+      "Built responsive data tables, forms, and dashboards using Angular Material for a consistent UI.",
+      "Collaborated with backend team to design and consume ASP.NET Core APIs for admin operations.",
+    ],
+    techStack: [
+      "Angular",
+      "TypeScript",
+      "ASP.NET Core",
+      "C#",
+      "Angular Material",
+      "REST APIs",
+      "Bootstrap",
+    ],
+    category: "Full Stack / SaaS / Admin",
+    imgPath: dialogAdmin,
+    ghLink: "",
+    demoLink: "",
+    isBlog: false,
+  },
+  {
+    id: 2,
+    title: "ButterFactory DApp",
+    subtitle: "Blockchain Investment Platform",
+    type: "Decentralized Application",
+    status: "Completed",
+    description:
+      "A decentralized application (DApp) built on the Solana blockchain enabling automated cryptocurrency investment with risk-based portfolio management. Features real-time on-chain data visualization, wallet integration, and smart contract interactions for low, medium, and high-risk investment plans.",
+    responsibilities: [
+      "Built an interactive React dashboard to visualize on-chain token data including prices, supply, and performance metrics.",
+      "Implemented Solana wallet connection and smart contract interactions for automated investment plans.",
+      "Developed RESTful backend APIs using Node.js and Express.js for authentication, investment management, and profit distribution.",
+      "Worked with Solana Web3.js and Metaplex SDK to manage blockchain transactions and user investments.",
+      "Designed and implemented end-to-end features from frontend UI to backend APIs and blockchain integration.",
+    ],
+    techStack: [
+      "React.js",
+      "Solana Web3.js",
+      "Metaplex SDK",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Angular",
+    ],
+    category: "Full Stack / Blockchain / Web3",
+    imgPath: butter,
+    ghLink: "",
+    demoLink: "",
+    isBlog: false,
+  },
+  {
+    id: 4,
+    title: "ButterFactory Dashboard",
+    subtitle: "Real-Time On-Chain Data Visualization",
+    type: "Frontend Dashboard",
+    status: "Completed",
+    description:
+      "An interactive and data-rich dashboard built with React.js for real-time visualization of on-chain token data on the Solana blockchain. Displays live token prices, supply metrics, investment performance, and portfolio analytics — giving investors a clear, actionable view of their decentralized investments.",
+    responsibilities: [
+      "Built interactive charts and data visualizations for real-time on-chain token prices, supply, and performance metrics.",
+      "Integrated Solana Web3.js to fetch and display live blockchain data seamlessly.",
+      "Designed responsive and intuitive UI components for investment tracking across low, medium, and high-risk plans.",
+      "Connected dashboard with backend REST APIs for user-specific portfolio and profit data.",
+      "Optimized rendering performance to handle frequent real-time data updates efficiently.",
+    ],
+    techStack: [
+      "React.js",
+      "Solana Web3.js",
+      "JavaScript",
+      "REST APIs",
+      "CSS3",
+      "Bootstrap",
+    ],
+    category: "Frontend / Blockchain / Web3",
+    imgPath: dashboard,
+    ghLink: "",
+    demoLink: "",
+    isBlog: false,
+  },
+  {
+    id: 3,
+    title: "Task Management System",
+    subtitle: "RESTful Task Tracking & Management API",
+    type: "Backend System",
+    status: "Completed",
+    description:
+      "A comprehensive task management system with fully functional RESTful APIs built using ASP.NET Web API and C#. Supports task creation, assignment, tracking, and status management with secure authentication, authorization, and clean data access patterns using Entity Framework Core.",
+    responsibilities: [
+      "Developed RESTful APIs for task creation, assignment, tracking, and status management.",
+      "Implemented authentication and authorization to secure API endpoints.",
+      "Used Entity Framework Core for data access with full CRUD operations.",
+      "Followed industry best practices and design patterns throughout the codebase.",
+    ],
+    techStack: [
+      "ASP.NET Web API",
+      "C#",
+      "Entity Framework Core",
+      "SQL Server",
+      "JWT Authentication",
+      ".NET Core",
+    ],
+    category: "Backend / API",
+    imgPath: codeEdit,
+    ghLink: "",
+    demoLink: "",
+    isBlog: false,
+  },
+];
 
 function Projects() {
   return (
@@ -21,72 +171,24 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+          {projects.map((project) => (
+            <Col key={project.id} md={4} className="project-card">
+              <ProjectCard
+                imgPath={project.imgPath}
+                isBlog={project.isBlog}
+                title={project.title}
+                subtitle={project.subtitle}
+                type={project.type}
+                status={project.status}
+                description={project.description}
+                responsibilities={project.responsibilities}
+                techStack={project.techStack}
+                category={project.category}
+                ghLink={project.ghLink}
+                demoLink={project.demoLink}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>
