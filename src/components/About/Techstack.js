@@ -17,6 +17,10 @@ import {
   SiMicrosoftsqlserver,
   SiRedis,
   SiMongodb,
+  SiPython,
+  SiGit,
+  SiPostman,
+  SiVisualstudio,
 } from "react-icons/si";
 import {
   FaServer,
@@ -26,6 +30,8 @@ import {
   FaCodeBranch,
   FaMobileAlt,
   FaAtom,
+  FaTools,
+  FaCubes,
 } from "react-icons/fa";
 
 const skillCategories = [
@@ -88,6 +94,40 @@ const skillCategories = [
     title: "Message Queue",
     skills: [
       { name: "RabbitMQ", icon: <SiRabbitmq color="#FF6600" /> },
+    ],
+  },
+  {
+    title: "Web3 & Blockchain",
+    skills: [
+      { name: "Solana", icon: <FaCubes color="#14F195" /> },
+      { name: "Web3.js", icon: <FaCubes color="#06B6D4" /> },
+      { name: "Metaplex SDK", icon: <FaCubes color="#A78BFA" /> },
+      { name: "Wallet Integration", icon: <FaShieldAlt color="#FBBF24" /> },
+      { name: "Smart Contracts", icon: <FaCubes color="#60A5FA" /> },
+    ],
+  },
+  {
+    title: "Languages",
+    skills: [
+      { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
+      { name: "JavaScript (ES6+)", icon: <SiJavascript color="#F7DF1E" /> },
+      { name: "C#", icon: <SiCsharp color="#239120" /> },
+      { name: "SQL", icon: <SiMicrosoftsqlserver color="#CC2927" /> },
+      { name: "Python", icon: <SiPython color="#3776AB" /> },
+      { name: "HTML5", icon: <SiHtml5 color="#E34F26" /> },
+      { name: "CSS3", icon: <SiCss3 color="#1572B6" /> },
+    ],
+  },
+  {
+    title: "DevOps & Tools",
+    skills: [
+      { name: "Git", icon: <SiGit color="#F1502F" /> },
+      { name: "VS Code", icon: <SiVisualstudio color="#0078D4" /> },
+      { name: "Visual Studio", icon: <SiVisualstudio color="#0078D4" /> },
+      { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
+      { name: "SSMS", icon: <SiMicrosoftsqlserver color="#CC2927" /> },
+      { name: "Jenkins", icon: <FaTools color="#D82828" /> },
+      { name: "Git Branching", icon: <SiGit color="#F1502F" /> },
     ],
   },
 ];
