@@ -13,14 +13,10 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              A <b className="purple">Full Stack Developer</b> with <b className="purple">2 years</b> of hands-on experience designing and 
-              delivering high-performance web systems. I write clean, reusable code across 
-              the full stack, from pixel-perfect <b className="purple">Angular & React</b> interfaces to robust 
-              <b className="purple"> .NET Core APIs</b> and optimized <b className="purple">SQL databases</b>.
+              A <b className="purple">Full Stack Developer</b> with <b className="purple">2+ years</b> of hands-on experience in <b className="purple">Angular</b> and <b className="purple">React.js</b>, and <b className="purple">1+ year</b> with <b className="purple">ASP.NET Core</b> and <b className="purple">SQL Server</b>. I build scalable web applications using modern frameworks like <b className="purple">Angular 17</b> with <b className="purple">RxJS & Signals</b>, and develop robust APIs using <b className="purple">.NET 8</b> and <b className="purple">Clean Architecture</b> patterns. Skilled in database design, API optimization, and implementing microservices architectures.
               <br />
               <br />
-              My core interests lie in building <i><b className="purple">intelligent web applications</b></i>, 
-              leveraging <i><b className="purple">Artificial Intelligence</b></i> to solve real-world problems, and staying at the forefront of emerging technologies.
+              My core interests lie in building <i><b className="purple">scalable web applications</b></i>, <i><b className="purple">blockchain integration</b></i> with Web3 technologies, and leveraging <i><b className="purple">Artificial Intelligence</b></i> to solve real-world problems. Passionate about clean code practices and staying at the forefront of emerging technologies.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

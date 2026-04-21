@@ -5,10 +5,10 @@ import Particle from "../Particle";
 
 function Experience() {
     const sevrinDesc = <>
-                  Building and optimizing <span className="purple">Dialog & Dialog Admin</span> a SaaS-based Stakeholder Engagement and Workflow Management Platform. Responsible for developing scalable Angular components, integrating REST APIs, and implementing performance optimizations including lazy loading and change detection strategies. Also contributing to backend development by designing RESTful services using ASP.NET Web API and C#.
+                  Building and optimizing <span className="purple">Dialog & Dialog Admin</span>, a SaaS-based Stakeholder Engagement and Workflow Management Platform. Developed scalable Angular components using Signals, RxJS, and reactive forms with optimized change detection. Designed and maintained RESTful APIs using ASP.NET Core 8, implementing clean architecture, CQRS, repository patterns, and JWT authentication. Optimized SQL Server queries, implemented database indexing, and ensured seamless frontend-backend integration for complex workflows.
                 </>;
     const esoftageDesc = <>
-                  Developed <span className="purple">ButterFactory</span>, a decentralized investment application on the Solana blockchain with automated risk-based portfolio management. Built interactive <span className="purple">Butter Dashboard</span> for real-time on-chain data visualization, integrated Solana wallet connectivity, and developed RESTful backend APIs using Node.js and Express.js for authentication and investment management.
+                  Developed <span className="purple">ButterFactory DApp</span>, a decentralized investment application on Solana blockchain featuring automated risk-based portfolio management. Built interactive <span className="purple">Dashboard</span> using React for real-time on-chain token data visualization. Integrated Solana wallet connectivity and Web3.js for smart contract interactions. Developed RESTful backend APIs with Node.js and Express.js for authentication, investment management, and profit distribution.
                 </>;
     const cyberDesc = "Completed a hands-on web development internship focused on building responsive interfaces and strengthening practical knowledge of modern frontend technologies. Gained real-world exposure to development workflows, version control, and collaborative team practices.";
               
@@ -26,28 +26,23 @@ function Experience() {
           <Col md={4} className="project-card">
             <ExperienceCard
               jobTitle="Angular & ASP.NET Core"
-              company="Sevrin Ltd"
-              duration="Nov 2024 – Present"
+              company="Sevrin Limited"
+              duration="Dec 2024 – Present"
               badge="Full-Time"
               description={sevrinDesc}
               techStack={[
                 // Angular
-                "Angular",
+                "Angular 17",
                 "TypeScript",
                 "RxJS",
                 "Angular Material",
-                "Angular CLI",
                 "Reactive Forms",
                 "Lazy Loading",
                 "Angular Routing",
                 "Signals",
                 "Component Architecture",
                 "Change Detection",
-                "Directives",
-                "Pipes",
-                "Guards",
                 "Interceptors",
-                "NgRx",
                 // Web Development
                 "HTML5",
                 "CSS3",
@@ -58,35 +53,33 @@ function Experience() {
                 "SCSS/SASS",
 
                 // .NET Core
-                ".NET Core",
-                "ASP.NET Web API",
+                ".NET 8",
+                "ASP.NET Core Web API",
                 "C#",
                 "Entity Framework Core",
                 "LINQ",
                 "Dependency Injection",
-                "Middleware",
                 "JWT Authentication",
-                "Identity Framework",
                 "CQRS",
                 "MediatR",
                 "Repository Pattern",
                 "Unit Of Work",
                 "Clean Architecture",
+                "Layered Architecture",
 
                 // SQL Database
                 "SQL Server",
                 "T-SQL",
                 "Stored Procedures",
                 "Database Design",
-                "Indexing & Optimization",
+                "Query Optimization",
+                "Indexing",
                 "SSMS",
 
                 // API Integration
                 "REST APIs",
                 "Postman",
                 "Swagger / OpenAPI",
-                "HTTP Client",
-                "JSON",
                 "API Authentication",
                 ]}
             />
@@ -101,13 +94,21 @@ function Experience() {
               description={esoftageDesc}
               techStack={[
                 "React.js",
-                "Solana",
-                "Web3.js",
-                "Metaplex SDK",
+                "Angular",
+                "TypeScript",
+                "JavaScript (ES6+)",
                 "Node.js",
                 "Express.js",
                 "MongoDB",
-                "Angular",
+                "REST APIs",
+                "Solana Blockchain",
+                "Web3.js",
+                "Metaplex SDK",
+                "Wallet Integration",
+                "Smart Contracts",
+                "HTML5",
+                "CSS3",
+                "Bootstrap",
               ]}
             />
           </Col>
