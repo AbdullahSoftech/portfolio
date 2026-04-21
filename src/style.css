@@ -465,17 +465,22 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  box-shadow: 0 4px 15px rgba(199, 112, 240, 0.25) !important;
   color: white !important;
-  background-color: transparent !important;
-  opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
+  background: linear-gradient(135deg, rgba(30, 20, 50, 0.6), rgba(50, 30, 70, 0.4)) !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  opacity: 0.95 !important;
+  transition: all 0.4s ease 0s !important;
   height: 100% !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
 }
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  transform: translateY(-8px) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 8px 25px rgba(199, 112, 240, 0.4) !important;
+  border-color: rgba(199, 112, 240, 0.6) !important;
+  background: linear-gradient(135deg, rgba(40, 25, 60, 0.8), rgba(60, 40, 85, 0.6)) !important;
 }
 
 .blog-card {
@@ -758,4 +763,26 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Experience Badges & Professional Styling */
+/* --------- */
+
+.badge {
+  background: linear-gradient(135deg, rgba(99, 54, 134, 0.8), rgba(123, 81, 160, 0.7)) !important;
+  border: 1px solid rgba(199, 112, 240, 0.4) !important;
+  color: #e0e0e0 !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 6px !important;
+}
+
+.badge:hover {
+  background: linear-gradient(135deg, rgba(115, 65, 155, 0.9), rgba(140, 95, 180, 0.8)) !important;
+  border-color: rgba(199, 112, 240, 0.7) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(199, 112, 240, 0.3) !important;
 }
